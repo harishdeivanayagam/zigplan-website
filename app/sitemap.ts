@@ -9,6 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
+            url: 'https://www.zigplan.com/oss-app',
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        {
             url: 'https://www.zigplan.com/privacy-policy',
             lastModified: new Date(),
             changeFrequency: 'yearly',

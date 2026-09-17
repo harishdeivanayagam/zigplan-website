@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { Calculator, Lock, Menu, Package, Ruler, X } from "lucide-react"
 import { BookDemoButton } from "@/components/shared/book-demo-button"
+import { OssAppBanner } from "@/components/shared/oss-app-banner"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -55,6 +56,7 @@ export default function Navbar() {
           scrolled ? "bg-white/70 backdrop-blur-xl" : "bg-white/50 backdrop-blur-lg"
         }`}
       >
+        <OssAppBanner />
         <div className="flex h-18 items-center justify-between px-6 md:px-10">
           <div className="flex items-center gap-6">
             <Link href="/" className="inline-flex shrink-0">
@@ -107,6 +109,9 @@ export default function Navbar() {
               <Link href="/#pricing" className={linkClass}>
                 Pricing
               </Link>
+              <Link href="/oss-app" className={linkClass}>
+                Open source
+              </Link>
             </div>
           </div>
 
@@ -133,7 +138,7 @@ export default function Navbar() {
         </div>
 
         {show && (
-          <div className="absolute inset-x-0 top-18 z-30 border-b border-neutral-200 bg-white/95 py-5 shadow-lg backdrop-blur-2xl md:hidden">
+          <div className="absolute inset-x-0 top-full z-30 border-b border-neutral-200 bg-white/95 py-5 shadow-lg backdrop-blur-2xl md:hidden">
             <div className="flex flex-col gap-1 px-6">
               <p className="pt-1 pb-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-500">
                 Solutions
@@ -156,6 +161,13 @@ export default function Navbar() {
                 Pricing
               </Link>
               <Link
+                href="/oss-app"
+                className="py-2 font-medium text-brand-ink"
+                onClick={() => setShow(false)}
+              >
+                Open source
+              </Link>
+              <Link
                 href="/auth/login"
                 className="inline-flex items-center gap-1.5 py-2 font-medium"
                 onClick={() => setShow(false)}
@@ -173,7 +185,7 @@ export default function Navbar() {
           </div>
         )}
       </nav>
-      <div className="h-18 w-full shrink-0" aria-hidden />
+      <div className="h-(--marketing-header-h) w-full shrink-0" aria-hidden />
     </>
   )
 }

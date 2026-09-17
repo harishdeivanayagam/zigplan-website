@@ -155,7 +155,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-linear-to-b from-white/40 via-transparent to-[#f6f6f6]" />
           </div>
 
-          <div className="relative z-10 flex min-h-[calc(100svh-4.5rem)] w-full flex-col items-center justify-center px-6 py-28 text-center md:px-10">
+          <div className="relative z-10 flex min-h-[calc(100svh-var(--marketing-header-h,7rem))] w-full flex-col items-center justify-center px-6 py-28 text-center md:px-10">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
               For general contractors
             </p>
@@ -177,7 +177,13 @@ export default function Home() {
                 Login
               </Link>
             </div>
-            <p className="mt-5 text-sm text-neutral-500">Starts at $599/mo. Cancel whenever.</p>
+            <p className="mt-5 text-sm text-neutral-500">
+              Starts at $599/mo. Cancel whenever.{" "}
+              <Link href="/oss-app" className="text-brand-ink underline underline-offset-4 hover:text-brand">
+                or download free opensource app here
+              </Link>
+              <span className="text-neutral-400"> — Beta / Early Access</span>
+            </p>
           </div>
         </section>
 

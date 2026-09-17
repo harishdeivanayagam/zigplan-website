@@ -7,6 +7,7 @@ const productLinks = [
   { href: "/#estimation", label: "Estimation" },
   { href: "/#procurement", label: "Procurement" },
   { href: "/#pricing", label: "Pricing" },
+  { href: "/oss-app", label: "Open source app" },
 ]
 
 const companyLinks = [

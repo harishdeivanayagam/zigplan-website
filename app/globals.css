@@ -17,6 +17,9 @@ body {
   --marketing-cross: rgba(42, 42, 42, 0.22);
   --gutter: 14px;
   --frame-max: 1400px;
+  --oss-banner-h: 2.5rem;
+  --marketing-nav-h: 4.5rem;
+  --marketing-header-h: calc(var(--oss-banner-h) + var(--marketing-nav-h));
   padding-inline: var(--gutter);
 }
 
